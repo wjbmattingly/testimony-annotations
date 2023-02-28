@@ -16,7 +16,7 @@ if 'num' not in st.session_state:
     st.session_state["num"] = 1
 st.session_state["num"] = num
 
-with open(f"html/{st.session_state['num']:04}.html", "r", encoding="utf-8") as f:
+with open(f"html/{st.session_state['num']:04}.html", "r", encoding="utf-8", errors="ignore") as f:
     html = f.read()
 
 st.header(f"Testimony Number {num}")
